@@ -1,0 +1,46 @@
+create two server from EC2 AWS
+
+one server install Jenkins and another server install Ansible & Docker
+
+Created Two ubuntu server
+let's connect them with putty
+
+now open the port for jenkins 8080 from server Ec2
+then server:8080 and open jnekins portal
+
+to log in you need secrate key
+cmd - systemctl status jenkins
+
+copy secrate key and paste in ui to login
+
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.47/containers/json": dial unix /var/run/docker.sock: connect: permission denied
+
+Add your user to the docker group:
+
+bash
+Copy
+Edit
+sudo usermod -aG docker $USER
+Apply the group change:
+
+You need to log out and log back in, or run:
+
+bash
+Copy
+Edit
+newgrp docker
+Verify:
+Try running:
+
+bash
+Copy
+Edit
+docker ps
+It should no longer give a permission denied error.
+
+
+#ssh key gen
+ssh-keygen (then hit enter button)
+
+go to home then -> cd .ssh/ -> vi which file extention is .pub
+~
