@@ -1,0 +1,5 @@
+1 - created 2 server on aws ec2 installed jenkins and ansible on one server and one server installed docker
+2 - store code on git hub what we want it to build pipeline so we get code from github build container so code will run anywhere
+3 - so we use jenins we get the code from git hub using ansible we copy the pipeline of jenikns and using ansible we build docker on other server
+4 - when we run pipeline code we will fetch using ansible we creeate docker and code will run
+5 - all important command anr store inside CICD directoary and code is in playbook directoary
