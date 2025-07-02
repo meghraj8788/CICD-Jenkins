@@ -1,0 +1,25 @@
+- name: build and deploy docker container
+  hosts:  myservers
+  gather_facts: True
+
+  tasks:
+    #- name: copy pipleine to serever
+    # copy:
+    #   src: /var/lib/jenkins/workspace/ansible-jenkins-pipeline2.0
+    #   dest: ~/CICD
+
+    - name: build docker image
+      docker_image:
+        name: deploye:latest
+        source: build
+        build:
+          path: ~/CICD
+        state: present
+
+    - name: build container
+      docker_container:
+        name: deploye_container
+        image: deploye:latest
+        ports:
+          - "8080"
+        state: started
