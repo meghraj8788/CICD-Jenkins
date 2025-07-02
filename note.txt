@@ -1,0 +1,9 @@
+#nano
+The nano command in Linux is used to open and edit text files in a terminal-based text editor called Nano.
+
+📘 What Nano Does
+It opens a file directly in the terminal.
+
+Lets you view, edit, and save the file.
+
+It’s a simpler alternative to vi or vim — great for beginners.
